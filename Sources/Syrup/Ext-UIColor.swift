@@ -42,6 +42,15 @@ public extension UIColor {
         }
     }
     
+    /// Build a dynamic colour from two static colours
+    /// (i.e. one for light, the other for dark)
+    static func from(_ light: UIColor, dark: UIColor) -> UIColor {
+        UIColor { $0.userInterfaceStyle == .light ? light : dark }
+    }
+    
+    /// Hex Initialiser
+    ///
+    /// Can include the "#" or omit it.
     convenience init?(from hex: String?) {
         guard let hex, hex.count > 0 else { return nil }
         let hexa = hex.hasPrefix("#")
