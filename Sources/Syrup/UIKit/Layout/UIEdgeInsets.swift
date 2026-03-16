@@ -7,8 +7,10 @@
 
 import UIKit
 
-extension NSDirectionalEdgeInsets {
+public extension NSDirectionalEdgeInsets {
+    
     init(_ all: CGFloat) {
         self.init(top: all, leading: all, bottom: all, trailing: all)
     }
+    
 }

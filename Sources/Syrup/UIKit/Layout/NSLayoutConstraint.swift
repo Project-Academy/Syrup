@@ -7,9 +7,11 @@
 
 import UIKit
 
-extension NSLayoutConstraint {
-    public func priority(_ prio: UILayoutPriority) -> Self {
+public extension NSLayoutConstraint {
+    
+    func priority(_ prio: UILayoutPriority) -> Self {
         self.priority = prio
         return self
     }
+    
 }
