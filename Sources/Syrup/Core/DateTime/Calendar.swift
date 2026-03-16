@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension Calendar {
+public extension Calendar {
+    
     func dateRangeForWeek(containing date: Date = .now, inTimeZone tz: TimeZone? = .current) -> ClosedRange<Date>? {
         var cal = Calendar(identifier: .iso8601)
         if let tz { cal.timeZone = tz }
@@ -25,5 +26,6 @@ extension Calendar {
         
         return startOfWeek...endOfWeek
     }
+    
 }
 

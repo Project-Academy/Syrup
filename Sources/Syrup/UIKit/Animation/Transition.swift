@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     static func crossDissolve(with view: UIView, duration: TimeInterval, animations: (() -> Void)? = nil) {
         transition(with: view, duration: duration, options: .curveEaseInOut, animations: animations)

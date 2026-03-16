@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     
     func inFormat(_ format: String) -> String {
         let formatter = DateFormatter(format)
@@ -17,7 +17,7 @@ extension Date {
 }
 
 
-extension ClosedRange<Date> {
+public extension ClosedRange<Date> {
     
     /// A string representation of the range of dates
     ///

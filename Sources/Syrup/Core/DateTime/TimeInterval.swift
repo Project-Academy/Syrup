@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension TimeInterval {
+public extension TimeInterval {
     
     static func seconds(_ number: Int) -> Self {
         Double(number)
