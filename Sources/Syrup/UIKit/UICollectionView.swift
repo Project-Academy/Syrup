@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol CVDiffable {
+@MainActor public protocol CVDiffable {
     associatedtype Section: Hashable, Sendable
     associatedtype Item:    Hashable, Sendable
     
