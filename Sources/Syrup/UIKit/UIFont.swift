@@ -5,6 +5,8 @@
 //  Created by Sarfraz Basha on 26/11/2025.
 //
 
+#if !os(tvOS)
+
 import UIKit
 
 public extension UIFont {
@@ -76,3 +78,5 @@ public extension UIFont {
 private extension UIFont.Weight {
     static let allBolds: Array<UIFont.Weight> = [.medium, .semibold, .bold, .heavy, .black]
 }
+
+#endif
