@@ -7,6 +7,7 @@
 
 #if !os(tvOS)
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIFont {
@@ -79,4 +80,5 @@ private extension UIFont.Weight {
     static let allBolds: Array<UIFont.Weight> = [.medium, .semibold, .bold, .heavy, .black]
 }
 
+#endif
 #endif

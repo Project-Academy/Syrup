@@ -8,6 +8,7 @@ let package = Package(
     platforms: [
         .tvOS   (.v18),
         .iOS    ("17.6"),
+        .macOS  (.v13),
         .macCatalyst(.v18)
     ],
     products: [

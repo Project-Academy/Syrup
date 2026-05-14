@@ -5,6 +5,7 @@
 //  Created by Sarfraz Basha on 5/12/2025.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 @MainActor public protocol CVDiffable {
@@ -46,3 +47,4 @@ public extension UICollectionView {
     static let elementKindGlobalHeader: String = "GlobalHeader"
 }
 
+#endif

@@ -5,6 +5,7 @@
 //  Created by Sarfraz Basha on 8/12/2025.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension NSLayoutConstraint {
@@ -15,3 +16,4 @@ public extension NSLayoutConstraint {
     }
     
 }
+#endif
