@@ -8,16 +8,18 @@ let package = Package(
     platforms: [
         .tvOS   (.v18),
         .iOS    ("17.6"),
-        .macOS  (.v13),
         .macCatalyst(.v18)
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(name: "Syrup", targets: ["Syrup"])
+        // Two products from the same repo:
+        // - `Syrup`   — the full syntactic-sugar surface (also re-exports Expires)
+        // - `Expires` — just the `@Expires` property wrapper, for consumers
+        //               that want the wrapper without the rest of Syrup.
+        .library(name: "Syrup",   targets: ["Syrup"]),
+        .library(name: "Expires", targets: ["Expires"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(name: "Syrup")
+        .target(name: "Expires"),
+        .target(name: "Syrup", dependencies: ["Expires"]),
     ]
 )
