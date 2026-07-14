@@ -6,9 +6,8 @@ import PackageDescription
 let package = Package(
     name: "Syrup",
     platforms: [
-        .tvOS   (.v18),
-        .iOS    ("17.6"),
-        .macOS  (.v13),
+        .iOS("17.6"),
+        .tvOS("26.0"),
         .macCatalyst(.v18)
     ],
     products: [
