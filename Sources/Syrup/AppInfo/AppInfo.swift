@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if canImport(UIKit)
+import UIKit
+#endif
 
 public struct AppInfo {
     
@@ -30,6 +33,19 @@ public struct AppInfo {
         return plist[buildKey] as! String
     }
     
+    #if canImport(UIKit)
+    /** The app's home-screen icon at its largest, or nil where Info.plist names none (a test target).
+        Read through `CFBundleIcons`, so it works for asset-catalog icons and Icon Composer files alike. */
+    public static var icon: UIImage? {
+        guard let icons = plist["CFBundleIcons"] as? [String: Any],
+              let primary = icons["CFBundlePrimaryIcon"] as? [String: Any],
+              let files = primary["CFBundleIconFiles"] as? [String],
+              let name = files.last
+        else { return nil }
+        return UIImage(named: name)
+    }
+    #endif
+
     //--------------------------------------
     // MARK: - SECRETS -
     //--------------------------------------
